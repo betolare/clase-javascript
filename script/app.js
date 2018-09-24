@@ -34,7 +34,7 @@ var dias=["Lunes", "Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
 for(var i=0;i<7;i++){
 	console.log(dias[i]);
 }
-*/
+
 funcion 
 
 function suma(num1,num2){
@@ -43,5 +43,17 @@ function suma(num1,num2){
 }
 
 var res=suma(88,55);
+
+console.log(res);
+*/
+
+
+function iva(precio,iva){
+
+	var iva=precio*19/100;
+	return iva;
+}
+
+var res=iva(5000);
 
 console.log(res);
