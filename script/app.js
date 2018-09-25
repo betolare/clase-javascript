@@ -45,7 +45,7 @@ function suma(num1,num2){
 var res=suma(88,55);
 
 console.log(res);
-*/
+
 
 
 function iva(precio,iva){
@@ -57,3 +57,26 @@ function iva(precio,iva){
 var res=iva(5000);
 
 console.log(res);
+
+var titulos=document.getElementsByTagName('h1');
+console.log(titulos);
+
+var clasetexto=document.getElementsByClassName('texto');
+console.log(clasetexto);
+
+var sede=document.getElementById(sede);
+console.log('sede');*/
+
+function iva(precio_producto,porcentaje_iva){
+	var iva_producto=precio_producto*(porcentaje_iva/100);
+	return iva_producto;
+
+}
+
+function calcular_iva(){
+	var precio=parseInt(document.getElementById('precio').value);
+	var porcentaje_iva=parseInt(document.getElementById('iva').value);
+    var resultado=iva(precio,porcentaje_iva);
+    var salida=document.getElementById('resultado');
+    salida.value=resultado;
+}
