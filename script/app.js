@@ -65,7 +65,7 @@ var clasetexto=document.getElementsByClassName('texto');
 console.log(clasetexto);
 
 var sede=document.getElementById(sede);
-console.log('sede');*/
+console.log('sede');
 
 function iva(precio_producto,porcentaje_iva){
 	var iva_producto=precio_producto*(porcentaje_iva/100);
@@ -80,3 +80,5 @@ function calcular_iva(){
     var salida=document.getElementById('resultado');
     salida.value=resultado;
 }
+*/
+
