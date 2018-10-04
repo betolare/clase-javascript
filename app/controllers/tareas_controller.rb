@@ -14,6 +14,7 @@ class TareasController < ApplicationController
 	   	
 	  if @tarea.save
 	  #insert into tareas(titulo,descripcion) values(xxx,xxx)
+       redirect_to controller: 'tareas', action: 'show', id: @tarea.id #redirije a la pagina con su id
        else
        	 render :new
 	  end
@@ -24,9 +25,15 @@ class TareasController < ApplicationController
       #select*from tareas where id=
    end
 
-   def 
-
+   def destroy
+      @tarea = Tarea.find(params[:id])
+      @tarea.destroy
+      redirect_to controller: 'tareas', action: 'index'
+      #delete*from tareas where id=
    end
+
+   def edit
+   	@tarea = Tarea.find(params[:id])
    	
    end
 

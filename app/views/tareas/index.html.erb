@@ -1,7 +1,16 @@
 <h1>Mis tareas</h1>
 
-<ul>
+<table class="table table-hover">
+	<thead class="thead-primary">
+		<th>Tareas</th>
+		<th>Editar</th>
+		<th>Eliminar</th>
+	</thead>
 	<% @tareas.each do |tarea|%>
-    <li><%= tarea.titulo %></li>
+    <tr>
+    	<td><%= link_to tarea.titulo, {controller: "tareas", action: "show", id: tarea.id}%></td>
+    	<td><button class="btn btn-primary">Editar</button></td>
+    	<td><%= link_to "Eliminar", {controller: "tareas", action: "destroy", id: tarea.id}, method: "delete", data: {confirm: "Estas seguro?"}, class: "btn btn-danger" %></td>
+     </tr>
 <% end %>
-</ul>
+</table>
