@@ -1,7 +1,7 @@
 <% @tarea.errors.full_messages.each do |mensaje|%>
    <p class="alert alert-success"><%= mensaje %></p>
 <%end%>
-<h1>Tarea nueva</h1>
+<h1>Editar tarea</h1>
 <%= form_for(@tarea) do |f| %>
 	<div class="form-group">
 		<label>Titulo</label>
