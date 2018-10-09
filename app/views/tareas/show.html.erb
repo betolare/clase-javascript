@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 24rem;">
 	
 	<div class="card-body">
 		<div class="card-title">
@@ -11,3 +11,15 @@
 <% unless @tarea.usuario.nil?%>
 <p>Escrito por: <%= @tarea.usuario.email %></p>
 <%end%>
+
+	<h3>Agregar comentario</h3>
+	<%= render "comentarios/form"%>
+     
+     <h3>Comentarios</h3>
+     <ul>
+     	<% @tarea.comentarios.each do |comentario| %>
+          <li>
+          	<%= comentario.contenido %>
+          </li>          
+     	<%end%>
+     </ul>

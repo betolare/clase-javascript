@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  resources :comentarios
   devise_for :usuarios
   resources :tareas
+  resources :tareas do
+  	   resources :comentarios
+  	end
+
+  	
+
   #get 'tareas' , to: 'tareas#index'
   #get 'tareas/new' , to: 'tareas#new'
    #post 'tareas' , to: 'tareas#create'
@@ -11,4 +18,6 @@ Rails.application.routes.draw do
   get 'bienvenido/index'
   root 'bienvenido#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+
 end

@@ -22,7 +22,8 @@ class TareasController < ApplicationController
 	  end
    end
 
-   def show      
+   def show 
+      @comentario = Comentario.new     
       #select*from tareas where id=
    end
 

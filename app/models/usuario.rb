@@ -5,4 +5,5 @@ class Usuario < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tareas #un usuario tiene muchas tareas
+  has_many :comentarios
 end
