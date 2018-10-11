@@ -16,6 +16,7 @@ class TareasController < ApplicationController
 	  @tarea.usuario = current_usuario 	
 	  if @tarea.save
 	  #insert into tareas(titulo,descripcion) values(xxx,xxx)
+       CorreosMailer.notificacion(@tarea).deliver_now# deliver entreguelo ahora
        redirect_to @tarea #controller: 'tareas', action: 'show', id: @tarea.id #redirije a la pagina con su id
        else
        	 render :new
