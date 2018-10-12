@@ -3,4 +3,5 @@ class Tarea < ApplicationRecord
      validates :titulo, presence: true
      validates :descripcion, presence: true
      has_many :comentarios
+     has_many :comentarios, dependent: :destroy
 end
